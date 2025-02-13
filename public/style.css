@@ -1,0 +1,254 @@
+/* Remove unnecessary styles as Tailwind CSS and Bootstrap will handle most of the styling */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 600% 600%;
+    animation: gradient 120s ease infinite;
+    transition: background-color 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a, nav ul li button {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+    color: #ffcc00;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    transition: transform 2s ease, opacity 2s ease;
+    display: none;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+section.visible {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+#about {
+    text-align: center;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+#projects .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-list .project {
+    border: 1px solid #ccc;
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(33% - 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#skills {
+    color: black;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    background-color: #f4f4f4;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+social-media a:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+#reviews {
+    color: white;
+}
+
+#reviews input, #reviews textarea {
+    color: black;
+}
+
+#reviews .review-item {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#reviews .review-item img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+#reviews .review-item .review-content {
+    flex-grow: 1;
+}
+
+#reviews .review-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#reviews .review-item p {
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00;
+}
+
+/* Infinite moving background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hehe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    animation: moveBackground 120s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}

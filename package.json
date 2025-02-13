@@ -1,0 +1,14 @@
+{
+  "$schema": "package-schema.json",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
