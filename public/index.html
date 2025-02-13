@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            padding-bottom: 60px; /* Space for the footer */
+        }
+        header {
+            margin-top: -10px; /* Move the header section a little bit upward */
+        }
+        nav {
+            margin-top: 0; /* Move the navigation section closer to the header */
+        }
+        #about p {
+            color: white; /* Make the about content white */
+        }
+        .phone-text {
+            color: white; /* Make the phone text white */
+        }
+        .project-title {
+            color: black; /* Make the Project 1 text black */
+        }
+    </style>
+</head>
+<body>
+    <header class="text-white p-2 text-center">
+        <h1 class="text-3xl font-bold">My Portfolio</h1>
+        <nav class="flex justify-center">
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about" class="p-4 m-2 rounded-lg section hidden" style="position: relative;">
+        <h2 class="text-2xl font-bold mb-2">About Me</h2>
+        <img src="images/profile.jpg" alt="Profile Picture" class="rounded-full w-32 h-32 mx-auto mb-2">
+        <p>
+            Hi! I'm Anuskar Sigdel. I'm a software developer with experience in Python, Java, and C. I'm currently learning web development and working on personal projects to improve my skills. I'm passionate about coding and enjoy learning new technologies.
+        </p>
+    </section>
+    <section id="skills" class="p-4 m-2 rounded-lg section hidden">
+        <h2 class="text-2xl font-bold mb-2">Skills</h2>
+        <ul class="list-disc list-inside">
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+    <section id="projects" class="p-2 m-1 rounded-lg section hidden" style="max-width: 600px; margin: auto;">
+        <h2 class="text-2xl font-bold mb-2">Projects</h2>
+        <div class="flex flex-wrap justify-around">
+            <div class="project bg-gray-100 p-2 rounded-lg shadow-lg m-1" style="max-width: 250px;">
+                <img src="images/project1.jpg" alt="Project 1" class="rounded-lg mb-2">
+                <h3 class="text-xl font-bold mb-1 project-title">Project 1</h3>
+                <a href="https://anuskar123.github.io/AS2h/" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                <p>SnackMan</p>
+            </div>
+            <!-- <div class="project bg-gray-100 p-2 rounded-lg shadow-lg m-1" style="max-width: 250px;">
+                <img src="images/project2.jpg" alt="Project 2" class="rounded-lg mb-2">
+                <h3 class="text-xl font-bold mb-1">Project 2</h3>
+                <a href="https://example.com/project2" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                <p>Project Description</p>
+            </div> -->
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+    <section id="contact" class="p-4 m-2 rounded-lg section hidden">
+        <h2 class="text-2xl font-bold mb-2">Contact</h2>
+        <p class="phone-text">Phone: 9810216186</p>
+        <p>Email: <a href="mailto:anuskarsigdel04@gmail.com" class="text-blue-500 hover:underline">anuskarsigdel04@gmail.com</a></p>
+        <div class="social-media flex justify-center space-x-4 mt-4">
+            <a href="https://github.com/Anuskar123" target="_blank" class="bg-gray-200 p-2 rounded-lg hover:bg-gray-300">
+                <img src="images/github.jpg" alt="GitHub" class="inline w-6 h-6 mr-2">GitHub
+            </a>
+            <!-- <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a> -->
+        </div>
+    </section>
+    <footer class="bg-gray-800 bg-opacity-75 text-white p-4 text-center">
+        <p>&copy; 2023 My Portfolio</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+/* Remove unnecessary styles as Tailwind CSS and Bootstrap will handle most of the styling */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Oswald|Roboto);
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 600% 600%;
+    animation: gradient 120s ease infinite;
+    transition: background-color 0.5s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #D4D9ED;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-family: "Raleway", sans-serif !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#canvas, .background-svg, .container-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.container-info {
+    z-index: 2;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: left;
+    margin: 75px 37px 47px;
+    color: #ff6363;
+    font-weight: bold;
+}
+
+h1 .info {
+    display: block;
+    color: #9294AE;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+
+p {
+    font-size: 20px;
+    color: #131111;
+}
+
+.section {
+    text-align: center;
+}
+
+.skillbar {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.display {
+    display: block;
+}
+
+.box {
+    text-align: right;
+    padding: 0px 40px;
+}
+
+.box-item {
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+    padding-right: 20px;
+    transition: all 0.3s;
+}
+
+.box-item:hover {
+    opacity: 0.6;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#Triangle-1 {
+    animation: box 42.5s infinite;
+}
+
+#Triangle-2 {
+    animation: box2 12.5s infinite;
+}
+
+@keyframes box2 {
+    10% {
+        transform: rotate(1deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes box {
+    10% {
+        transform: rotate(-2deg);
+    }
+    80% {
+        transform: rotate(2deg);
+    }
+}
+
+header {
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a, nav ul li button {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav ul li a:hover, nav ul li button:hover {
+    color: #ffcc00;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffcc00;
+}
+
+section {
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    transition: transform 2s ease, opacity 2s ease;
+    display: none;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+section.visible {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+#about {
+    text-align: center;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+#projects {
+    padding: 1rem;
+    margin: 1rem;
+    max-height: 400px; /* Reduce the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+}
+
+#projects .project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-list .project {
+    margin: 0.5rem;
+    padding: 1rem;
+    max-width: 250px; /* Reduce the maximum width for each project */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#skills {
+    color: rgb(248, 241, 241);
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    background-color: #151313;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #e0e0e0;
+}
+
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+social-media a:hover {
+    background-color: #ddd;
+    transform: scale(1.1);
+}
+
+#reviews {
+    max-height: 500px; /* Ensure the review section is fully visible with scrolling */
+    overflow-y: auto;
+}
+
+#reviews input, #reviews textarea {
+    color: rgb(245, 235, 235);
+}
+
+#reviews .review-item {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#reviews .review-item img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+#reviews .review-item .review-content {
+    flex-grow: 1;
+}
+
+#reviews .review-item strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#reviews .review-item p {
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00;
+}
+
+/* Infinite moving background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/hehe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+    animation: moveBackground 120s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* flash alert styles */
+
+.flash-container {
+    width: 100%;
+    position: fixed;
+    z-index: 700;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.alert {
+    text-align: center !important;
+    width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    color: #211809 !important;
+}
+
+/* Nav Screen */
+
+.nav-screen {
+    height: 100%;
+    z-index: 500;
+    position: fixed;
+    background-color: #000;
+    opacity: 1;
+    right: -285px; /* start off behind the scenes */
+    -webkit-font-smoothing: antialiased;
+    position: fixed;
+    width: 285px;
+}
+
+.nav-screen .active {
+    display: block;
+}
+
+/* nav header links */
+
+.nav-brand {
+    position: fixed;
+    left: 0;
+    z-index: 600;
+    padding: 10px;
+}
+
+.nav-brand img {
+    width: 50px;
+}
+
+.fa-bars {
+    display: none !important;
+    color: #ff6363;
+    float: right;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    z-index: 500;
+    cursor: pointer;
+}
+
+.fa-times {
+    color: #ff6363;
+    float: right;
+    padding: 20px;
+    right: 0;
+    z-index: 600;
+    cursor: pointer;
+}
+
+.header-links {
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+}
+
+.header-links li {
+    color: white;
+    display: inline;
+    float: right;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.header-links a {
+    color: #757575;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.header-links a:hover {
+    color: #ff6363 !important;
+}
+
+/* slide out nav menu styles */
+
+.nav-container {
+    padding-top: 10%;
+}
+
+.nav-links {
+    width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-links ul {
+    margin-top: 15%;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 2.5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-links a:hover {
+    color: #ff6363;
+    -webkit-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+#fp-nav ul li .fp-tooltip {
+    color: #5f5f5f !important;
+}
+
+/* Expanding border effect */
+
+.header-links a::after {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+    opacity: 0;
+    -webkit-transition: width 0.6s, opacity 0.8s;
+    -moz-transition: width 0.6s, opacity 0.8s;
+    transition: width 0.6s, opacity 0.8s;
+}
+
+.header-links a:hover::after,
+.header-links a:focus::after {
+    opacity: 1;
+    width: 100%;
+}
+
+/* main header section */
+
+.opaque-bg {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+    padding: 1px 1px 5px 5px;
+}
+
+.aboutme {
+    background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg") no-repeat;
+    background-size: cover;
+}
+
+.aboutme p {
+    color: white;
+    font-weight: 100;
+    font-size: 17.4px;
+}
+
+/* bouncing arrow */
+
+.fa-chevron-down {
+    color: #ff6363 !important;
+    bottom: 10px;
+    margin-left: -30px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: 1.2s ease;
+    transition: 1.2s ease;
+}
+
+/* Scroll down indicator (bouncing) */
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateX(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -ms-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+/* about section */
+
+/* Skill bars */
+
+.container-skillbar {
+    width: 100%;
+    padding-top: 30px;
+    padding-right: 2%;
+    padding-left: 2%;
+    height: auto;
+    overflow: none;
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+    background: #6adcfa;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0;
+    background: #6adcfa;
+    border-radius: 3px;
+}
+
+.skillbar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+}
+
+@keyframes expand {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.skillbar-bar {
+    animation: expand 2s ease-in-out;
+}
